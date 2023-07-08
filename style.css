@@ -1,0 +1,21 @@
+h1{
+    color: tomato;
+}
+button{
+    width: 300;
+    height: 300;
+    font-size: 40;
+    color: navy;
+    top: 80%;
+    left: 50%;
+    position: absolute;
+    background-color: gold;
+    font-size: 30;
+   
+}
+.monster{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
