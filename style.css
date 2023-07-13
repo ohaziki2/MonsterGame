@@ -1,21 +1,24 @@
-h1{
-    color: tomato;
-}
-button{
-    width: 300;
-    height: 300;
-    font-size: 40;
-    color: navy;
-    top: 80%;
-    left: 50%;
-    position: absolute;
-    background-color: gold;
-    font-size: 30;
-   
-}
-.monster{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  #start-screen, #game-screen, #result-screen, #game-clear-screen {
+    margin-top: 100px;
+  }
+  
+  #monster-name {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #result-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  

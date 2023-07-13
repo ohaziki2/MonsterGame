@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スタートボタンを押してね</title>
-    <link rel="stylesheet" href="style.css">
+  <title>モンスターゲーム</title>
+  <style>
+    /* スタイルを追加してください */
+  </style>
 </head>
 <body>
-    <button id="start-button">ゲームスタート</button>
-    <div class="monster">
-        <img id="monster01" src="monster/monster01.png" alt="">
-        <img id="monster02" src="monster/monster01.png" alt="">
-        <img id="monster03" src="monster/monster01.png" alt="">
-    </div>
-    
-    
-    <script src="main.js"></script>
+  <div id="start-screen">
+    <h1>モンスターゲーム</h1>
+    <button id="start-button">スタート</button>
+  </div>
+  
+  <div id="game-screen" style="display: none;">
+    <div id="monster-container"></div>
+    <button id="attack-button">戦闘する</button>
+  </div>
+  
+  <div id="result-screen" style="display: none;">
+    <h2 id="result-text"></h2>
+    <button id="next-button">次へ</button>
+  </div>
+  
+  <div id="game-clear-screen" style="display: none;">
+    <h1>ゲームクリア！</h1>
+    <p>おめでとうございます！</p>
+  </div>
+  
+  <script src="main.js"></script>
 </body>
 </html>
