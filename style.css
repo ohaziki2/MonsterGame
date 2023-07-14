@@ -1,24 +1,46 @@
 body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
-  #start-screen, #game-screen, #result-screen, #game-clear-screen {
-    margin-top: 100px;
-  }
-  
-  #monster-name {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  #result-text {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#start-screen,
+#game-screen,
+#result-screen,
+#game-clear-screen {
+  margin-top: 100px;
+}
+
+#monster-container {
+  margin-bottom: 20px;
+}
+
+#monster-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+#monster-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#win-rate {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#result-screen {
+  display: none;
+}
+
+#result-content {
+  color: white;
+  background-color: black;
+  padding: 20px;
+}
