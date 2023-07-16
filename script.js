@@ -1,17 +1,17 @@
 // モンスターのデータ
 const monsters = [
-  { name: 'モンスター1', winRate: 0.3, image: '1.png' },
-  { name: 'モンスター2', winRate: 0.4, image: '2.png' },
-  { name: 'モンスター3', winRate: 0.5, image: '3.png' },
-  { name: 'モンスター4', winRate: 0.5, image: '4.png' },
-  { name: 'モンスター5', winRate: 0.5, image: '5.png' },
-  { name: 'モンスター6', winRate: 0.5, image: '6.png' },
-  { name: 'モンスター7', winRate: 0.5, image: '7.png' },
-  { name: 'モンスター8', winRate: 0.5, image: '8.png' },
-  { name: 'モンスター9', winRate: 0.5, image: '9.png' },
-  { name: 'モンスター10', winRate: 0.5, image: '10.png' },
-  { name: 'モンスター11', winRate: 0.5, image: '11.png' },
-  { name: 'モンスター12', winRate: 0.8, image: '12.png' }
+  { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' },
+  { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' },
+  { name: 'アクアアイ', winRate: 0.5, image: '3.png' },
+  { name: 'ピンクゴースト', winRate: 0.5, image: '4.png' },
+  { name: 'イエローウィング', winRate: 0.5, image: '5.png' },
+  { name: 'パープルスペクター', winRate: 0.5, image: '6.png' },
+  { name: 'ライムハンド', winRate: 0.5, image: '7.png' },
+  { name: 'ネイビーマインド', winRate: 0.5, image: '8.png' },
+  { name: 'レッドデビル', winRate: 0.5, image: '9.png' },
+  { name: 'ブルーヘア', winRate: 0.5, image: '10.png' },
+  { name: 'グレイ', winRate: 0.5, image: '11.png' },
+  { name: '名前をつけれるほどの特徴がない悲しきモンスター', winRate: 0.8, image: '12.png' }
 ];
 
 let currentMonster;
@@ -38,6 +38,17 @@ document.getElementById('attack-button').addEventListener('click', () => {
     victories++;
     defeats = 0;
     resultText.textContent = '勝利！';
+
+      gameScreen.style.display = 'none';
+      resultScreen.style.display = 'block';
+      document.body.style.backgroundColor = '#FF6761';
+      setTimeout(() => {
+        resultScreen.style.display = 'none';
+        startScreen.style.display = 'block';
+        document.body.style.backgroundColor = '';
+        defeats = 0;
+      }, 3000);
+
   } else {
     victories = 0;
     defeats++;
