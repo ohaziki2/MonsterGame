@@ -8,6 +8,10 @@ button {
   font-size: 16px;
 }
 
+#Test {
+  color: #362ae0;
+}
+
 #start-screen,
 #game-screen,
 #result-screen,
@@ -41,6 +45,5 @@ button {
 
 #result-content {
   color: white;
-  background-color: black;
   padding: 20px;
 }

@@ -1,11 +1,11 @@
 // モンスターのデータ
 const monsters = [
-  { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' },
-  { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' },
-  { name: 'アクアアイ', winRate: 0.5, image: '3.png' },
-  { name: 'ピンクゴースト', winRate: 0.5, image: '4.png' },
-  { name: 'イエローウィング', winRate: 0.5, image: '5.png' },
-  { name: 'パープルスペクター', winRate: 0.5, image: '6.png' },
+  { name: 'グリーンモンスター', winRate: 0.9, image: '1.png' },
+  { name: 'オレンジスパイク', winRate: 0.9, image: '2.png' },
+  { name: 'アクアアイ', winRate: 0.9, image: '3.png' },
+  { name: 'ピンクゴースト', winRate: 0.9, image: '4.png' },
+  { name: 'イエローウィング', winRate: 0.9, image: '5.png' },
+  { name: 'パープルスペクター', winRate: 0.9, image: '6.png' },
   { name: 'ライムハンド', winRate: 0.5, image: '7.png' },
   { name: 'ネイビーマインド', winRate: 0.5, image: '8.png' },
   { name: 'レッドデビル', winRate: 0.5, image: '9.png' },
@@ -38,16 +38,18 @@ document.getElementById('attack-button').addEventListener('click', () => {
     victories++;
     defeats = 0;
     resultText.textContent = '勝利！';
-
+    victories = 10;
       gameScreen.style.display = 'none';
       resultScreen.style.display = 'block';
-      document.body.style.backgroundColor = '#FF6761';
+      document.body.style.backgroundColor = '#00d0ff';
+      
       setTimeout(() => {
-        resultScreen.style.display = 'none';
-        startScreen.style.display = 'block';
+        startScreen.style.display = 'none';
+        gameScreen.style.display = 'block';
+        showRandomMonster();
         document.body.style.backgroundColor = '';
         defeats = 0;
-      }, 3000);
+      }, 2000);
 
   } else {
     victories = 0;
@@ -63,7 +65,7 @@ document.getElementById('attack-button').addEventListener('click', () => {
         startScreen.style.display = 'block';
         document.body.style.backgroundColor = '';
         defeats = 0;
-      }, 3000);
+      }, 2000);
       return;
     }
   }
@@ -74,6 +76,7 @@ document.getElementById('attack-button').addEventListener('click', () => {
   if (victories >= 10) {
     resultScreen.style.display = 'none';
     document.getElementById('game-clear-screen').style.display = 'block';
+    console.log("価値")
   }
 });
 
