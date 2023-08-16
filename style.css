@@ -47,3 +47,11 @@ button {
   color: white;
   padding: 20px;
 }
+
+#pig-meat {
+  width: 450px;
+  height: 400px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
