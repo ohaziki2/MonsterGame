@@ -12,30 +12,52 @@
   </div>
   <button id="pig-button">PIG</button>
   <p><img id="pig-meat" src="pig.png"></p>
-  <div id="game-screen" style="display: none;">
-    <div class="monster-container">
-      <img class="monster-image" alt="">
-      <h2 class="monster-name"></h2>
-      <p class="win-rate"></p>
+  <div id="game-screen" style="display: none;"> 
+    <div class="monster-list"> 
+      <div class="monster-container">
+        
+        <img class="monster-image" alt="">
+        <h2 class="monster-name"></h2>
+        <p class="win-rate"></p>
+        <img class="reward"> </img>
+      </div>
+      <div class="monster-container">
+        <img class="monster-image" alt="">
+        <h2 class="monster-name"></h2>
+        <p class="win-rate"></p>
+        <img class="reward"> </img>
+      </div>
+      <div class="monster-container">
+        <img class="monster-image" alt="">
+        <h2 class="monster-name"></h2>
+        <p class="win-rate"></p>
+        <img class="reward"> </img>
+      </div>
     </div>
-    <div class="monster-container">
-      <img class="monster-image" alt="">
-      <h2 class="monster-name"></h2>
-      <p class="win-rate"></p>
-    </div>
-    <div class="monster-container">
-      <img class="monster-image" alt="">
-      <h2 class="monster-name"></h2>
-      <p class="win-rate"></p>
-    </div>
+   
     <div class="attack-options">
       <button class="attack-button" data-choice="1">選択肢1</button>
       <button class="attack-button" data-choice="2">選択肢2</button>
       <button class="attack-button" data-choice="3">選択肢3</button>
     </div>
     <p id="victory-count">勝利数: 0</p>
+    <div>
+      <div class="rowitem">
+        <img data-choice="0" class="slot"></img>
+        <img data-choice="1" class="slot"></img>
+        <img data-choice="2" class="slot"></img>
+        <img data-choice="3" class="slot"></img>
+        <img data-choice="4" class="slot"></img>
+      </div>
+      <div class="rowitem">
+        <img data-choice="5" class="slot"></img>
+        <img data-choice="6" class="slot"></img>
+        <img data-choice="7" class="slot"></img>
+        <img data-choice="8" class="slot"></img>
+        <img data-choice="9" class="slot"></img>
+      </div>
+    </div>
   </div>
-  
   <div id="result-screen" style="display: none;">
     <div id="result-content">
       <h2 id="result-text"></h2>

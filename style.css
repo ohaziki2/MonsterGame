@@ -19,8 +19,14 @@ button {
   margin-top: 100px;
 }
 
-#monster-container {
+.reward {
+  height: 100px;
+  width: 100px;
+  
+}
+.monster-container {
   margin-bottom: 20px;
+  width: 220px;
 }
 
 #monster-image {
@@ -54,4 +60,14 @@ button {
   bottom: 0;
   right: 0;
   position: absolute;
+}
+
+.monster-list {
+  display: flex;
+  justify-content: center;
+}
+
+.slot {
+  height: 80px;
+  width: 80px;
 }
