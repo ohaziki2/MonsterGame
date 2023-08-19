@@ -1,20 +1,20 @@
 // モンスターのデータ
 const monsters = [
-  { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' ,reward: 0,},
-  { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' ,reward: 0,},
-  { name: 'アクアアイ', winRate: 0.5, image: '3.png' ,reward: 0,},
-  { name: 'ピンクゴースト', winRate: 0.5, image: '4.png' ,reward: 0,},
-  { name: 'イエローウィング', winRate: 0.5, image: '5.png' ,reward: 0,},
-  { name: 'パープルスペクター', winRate: 0.5, image: '6.png' ,reward: 0,},
-  { name: 'ライムハンド', winRate: 0.5, image: '7.png' ,reward: 0,},
-  { name: 'ネイビーマインド', winRate: 0.5, image: '8.png' ,reward: 0,},
-  { name: 'レッドデビル', winRate: 0.5, image: '9.png' ,reward: 0,},
-  { name: 'ブルーヘア', winRate: 0.5, image: '10.png',reward: 0, },
-  { name: 'グレイ', winRate: 0.5, image: '11.png' ,reward: 1, },
-  { name: 'コーラルシェル', winRate: 0.8, image: '12.png' ,reward: 1, }
+  { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' ,reward: 0,score: 4},
+  { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' ,reward: 0,score: 4},
+  { name: 'アクアアイ', winRate: 0.5, image: '3.png' ,reward: 0,score: 4},
+  { name: 'ピンクゴースト', winRate: 0.5, image: '4.png' ,reward: 0,score: 4},
+  { name: 'イエローウィング', winRate: 0.5, image: '5.png' ,reward: 0,score: 4},
+  { name: 'パープルスペクター', winRate: 0.5, image: '6.png' ,reward: 0,score: 4},
+  { name: 'ライムハンド', winRate: 0.5, image: '7.png' ,reward: 0,score: 4},
+  { name: 'ネイビーマインド', winRate: 0.5, image: '8.png' ,reward: 0,score: 4},
+  { name: 'レッドデビル', winRate: 0.5, image: '9.png' ,reward: 0,score: 4},
+  { name: 'ブルーヘア', winRate: 0.5, image: '10.png',reward: 2,score: 4 },
+  { name: 'グレイ', winRate: 0.5, image: '11.png' ,reward: 1,score: 4 },
+  { name: 'コーラルシェル', winRate: 0.8, image: '12.png' ,reward: 1, score: 4}
 ];
 const perks = [,
-  { name: 'シールド',image: 'light_amulet.png'},
+  { name: 'シールド',image: 'shield.png'},
   { name: 'リロール',image: 'light_amulet.png'}
 ]
 //シールド 1 失敗判定無効
@@ -119,6 +119,7 @@ function showRandomMonsters() {
     }
     document.querySelectorAll('.monster-name')[i].textContent = currentMonsters[i].name;
     document.querySelectorAll('.win-rate')[i].textContent = `勝率: ${currentMonsters[i].winRate * 100}%`;
+    document.querySelectorAll('.monster-info')[i].textContent = `スコア` + currentMonsters[i].score;
   }
 }
 function refleshInventory() {
