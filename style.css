@@ -131,3 +131,15 @@ body{
   transform: translate3d(0, 0, 0.01);
   will-change: transform;
 }
+
+.title-Text {
+  font-size: 60px;
+}
+
+.small-Button {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  bottom: 395px;
+  right: 445px;
+}

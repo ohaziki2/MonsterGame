@@ -36,6 +36,8 @@ const pigMeat = document.getElementById('pig-meat');
 const myScore = document.getElementById('my-Score');
 
 document.getElementById('start-button').addEventListener('click', () => {
+  nowScore = 0;
+  myScore.textContent = "スコア:" + 0;
   startScreen.style.display = 'none';
   gameScreen.style.display = 'block';
   showRandomMonsters();
@@ -101,8 +103,6 @@ document.querySelectorAll('.attack-button').forEach(button => {
         resultText.textContent = '敗北...';
         if (defeats >= 1) {
           invetory = []
-          nowScore = 0;
-          myScore.textContent = "スコア:" + 0;
           gameScreen.style.display = 'none';
           resultScreen.style.display = 'block';
           document.body.style.backgroundColor = 'black';
@@ -189,7 +189,13 @@ document.getElementById('pig-button').addEventListener('click', () => {
 
   
 });
+function showAd(){
+  pigMeat.style.display = 'block';
+}
 
+function deleteAd(){
+  pigMeat.style.display = 'none';
+}
 document.addEventListener("DOMContentLoaded", function(event) {
 
   function ground() {
@@ -240,7 +246,7 @@ window.onload = function() {
   masterTL
     .add(ground(), 0)
     .add(clouds(), 0)
-    .timeScale(0.7)
+    .timeScale(0.6)
     .progress(1)
     .progress(0)
     .play();

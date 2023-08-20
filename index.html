@@ -13,11 +13,14 @@
     <div id="clouds"></div>
     <div id="ground"></div>
     <div id="start-screen">
-      <h1>モンスターゲーム</h1>
+      <h1 class="title-Text">モンスターゲーム</h1>
       <button id="start-button">スタート</button>
     </div>
     <button id="pig-button">POTATO</button>
-    <p><img id="pig-meat" src="potato.png" onclick="Redirect()"></p>
+    <div>
+      <img id="pig-meat" src="potato.png" onclick="Redirect()"></img>
+      <img class="small-Button" src="small.png" onclick="deleteAd()">
+    </div>
     <div id="game-screen" style="display: none;"> 
       <p id="my-Score">スコア: 0</p>
       <div class="monster-list"> 
