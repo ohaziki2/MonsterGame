@@ -1,19 +1,25 @@
 body {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 #Test {
-  color: #362ae0;
+  color: #979373;
 }
 
 #start-screen,
-#game-screen,
+#game-screen {
+  
+  position: relative; /* 要素の表示位置を設定 */
+  z-index: 1; /* 表示順を設定。デフォルトは 0 なので、1 以上に設定 */
+}
+
 #result-screen,
 #game-clear-screen {
   margin-top: 100px;
@@ -38,11 +44,13 @@ button {
 #monster-name {
   font-size: 24px;
   margin-bottom: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 #win-rate {
   font-size: 16px;
   margin-bottom: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 #result-screen {
@@ -52,6 +60,7 @@ button {
 #result-content {
   color: white;
   padding: 20px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 #pig-meat {
@@ -70,4 +79,55 @@ button {
 .slot {
   height: 80px;
   width: 80px;
+}
+
+#my-Score {
+  font-size: 30px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+html {
+  height:100%;
+  background:#63D0FF;
+}
+
+body{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+#wrapper {
+  position: relative; /* wrapperのpositionをrelativeに設定 */
+  width: 100%;
+  height: 100%;
+}
+
+#clouds {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/bg-clouds2-tinypng.png") repeat-x 0 bottom #ACE6FF;
+  width: 100%;
+  height: 230px;
+  min-height: 230px;
+  position: absolute; /* cloudsのpositionをabsoluteに設定 */
+  top: 0;
+  left: 0;
+  z-index: -1; /* 負のz-indexを設定して背後に配置 */
+  -webkit-transform: translate3d(0, 0, 0.01);
+  transform: translate3d(0, 0, 0.01);
+}
+
+#ground {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/grass_tile-tinypng.png") repeat-x 0 0 transparent;
+  position: absolute; /* groundのpositionをabsoluteに設定 */
+  bottom: 0;
+  left: 0;
+  z-index: -2; /* より低いz-indexを設定して背後に配置 */
+  width: 100%;
+  height: 192px;
+  min-height: 192px;
+  border: 0 none transparent;
+  outline: 0 none transparent;
+  -webkit-transform: translate3d(0, 0, 0.01);
+  transform: translate3d(0, 0, 0.01);
+  will-change: transform;
 }
