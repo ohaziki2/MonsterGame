@@ -1,17 +1,17 @@
 // モンスターのデータ
 const monsters = [
-  { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' ,reward: 0,score: 4,},
-  { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' ,reward: 0,score: 4,},
-  { name: 'アクアアイ', winRate: 0.5, image: '3.png' ,reward: 0,score: 4,},
-  { name: 'ピンクゴースト', winRate: 0.5, image: '4.png' ,reward: 0,score: 4,},
-  { name: 'イエローウィング', winRate: 0.5, image: '5.png' ,reward: 2,score: 4,},
-  { name: 'パープルスペクター', winRate: 0.5, image: '6.png' ,reward: 2,score: 4,},                                                           
-  { name: 'ライムハンド', winRate: 0.5, image: '7.png' ,reward: 0,score: 4,},
-  { name: 'ネイビーマインド', winRate: 0.5, image: '8.png' ,reward: 0,score: 4,},
-  { name: 'レッドデビル', winRate: 0.5, image: '9.png' ,reward: 0,score: 4,},
-  { name: 'ブルーヘア', winRate: 0.5, image: '10.png',reward: 2,score: 4,},
-  { name: 'グレイ', winRate: 0.95, image: '11.png' ,reward: 1,score: 4,},
-  { name: 'コーラルシェル', winRate: 0.8, image: '12.png' ,reward: 1, score: 4,}
+  { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' ,reward: 0,score: 10,},
+  { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' ,reward: 0,score: 6,},
+  { name: 'アクアアイ', winRate: 0.5, image: '3.png' ,reward: 0,score: 5,},
+  { name: 'ピンクゴースト', winRate: 0.6, image: '4.png' ,reward: 0,score: 4,},
+  { name: 'イエローウィング', winRate: 0.65, image: '5.png' ,reward: 2,score: 3,},
+  { name: 'パープルスペクター', winRate: 0.75, image: '6.png' ,reward: 2,score: 2,},                                                           
+  { name: 'ライムハンド', winRate: 0.55, image: '7.png' ,reward: 0,score: 4,},
+  { name: 'ネイビーマインド', winRate: 0.4, image: '8.png' ,reward: 0,score: 7,},
+  { name: 'レッドデビル', winRate: 0.1, image: '9.png' ,reward: 0,score: 25,},
+  { name: 'ブルーヘア', winRate: 0.7, image: '10.png',reward: 2,score: 4,},
+  { name: 'グレイ', winRate: 0.45, image: '11.png' ,reward: 1,score: 5,},
+  { name: 'コーラルシェル', winRate: 0.8, image: '12.png' ,reward: 1, score: 2,}
 ];
 const perks = [,
   { name: 'シールド',image: 'shield.png'},
@@ -75,7 +75,7 @@ document.querySelectorAll('.attack-button').forEach(button => {
       victories++;
       defeats = 0;
       nowScore += currentMonsters[choice - 1].score;
-      myScore.textContent = nowScore;
+      myScore.textContent = "スコア:" + nowScore;
       resultText.textContent = '勝利！';
       gameScreen.style.display = 'none';
       resultScreen.style.display = 'block';
@@ -187,3 +187,4 @@ document.getElementById('pig-button').addEventListener('click', () => {
 
   
 });
+
