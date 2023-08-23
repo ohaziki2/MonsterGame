@@ -34,6 +34,8 @@ const resultText = document.getElementById('result-text');
 const victoryCount = document.getElementById('victory-count');
 const pigMeat = document.getElementById('pig-meat');
 const myScore = document.getElementById('my-Score');
+const smallButton = document.getElementById('small-Button');
+const lastScore = document.getElementById('last-score');
 
 document.getElementById('start-button').addEventListener('click', () => {
   nowScore = 0;
@@ -101,6 +103,7 @@ document.querySelectorAll('.attack-button').forEach(button => {
         victories = 0;
         defeats++;
         resultText.textContent = '敗北...';
+        lastScore.textContent = no;
         if (defeats >= 1) {
           invetory = []
           gameScreen.style.display = 'none';
@@ -150,7 +153,7 @@ function showRandomMonsters() {
     if (perks[currentMonsters[i].reward]) {
       rewardImage.src = perks[currentMonsters[i].reward].image;
     } else {
-      rewardImage.src = null;
+      rewardImage.src = "transparent.png";
     }
     document.querySelectorAll('.monster-name')[i].textContent = currentMonsters[i].name;
     document.querySelectorAll('.win-rate')[i].textContent = `勝率: ${currentMonsters[i].winRate * 100}%`;
@@ -163,14 +166,14 @@ function refleshInventory() {
     if (invetory[i]) {
       invImage.src = perks[invetory[i]].image
     } else {
-      invImage.src = null
+      invImage.src = "transparent.png"
     }
     
   }
 }
-document.getElementById('pig-meat').addEventListener('click', () => {
-  window.location.href = "https://www.calbee.co.jp/"; 
-});
+//document.getElementById('pig-meat').addEventListener('click', () => {
+  //window.location.href = "https://www.calbee.co.jp/"; 
+//});
 
 
 function Redirect() {
@@ -195,6 +198,7 @@ function showAd(){
 
 function deleteAd(){
   pigMeat.style.display = 'none';
+  smallButton.style.display = 'none';
 }
 document.addEventListener("DOMContentLoaded", function(event) {
 
