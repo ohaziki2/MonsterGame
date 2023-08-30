@@ -90,6 +90,7 @@ document.querySelectorAll('.attack-button').forEach(button => {
         if (reward) invetory.push(reward)
         startScreen.style.display = 'none';
         gameScreen.style.display = 'block';
+        resultScreen.style.display = 'none';
         showRandomMonsters();
         document.body.style.backgroundColor = '';
         defeats = 0;
@@ -181,14 +182,6 @@ function Redirect() {
   window.location.href = "https://www.calbee.co.jp/"; 
 }
 
-document.getElementById('pig-button').addEventListener('click', () => {
-  if (showmeat === 0) {
-    pigMeat.style.display = 'block';
-    showmeat = 1;
-  } else {
-    pigMeat.style.display = 'none';
-    showmeat = 0;
-  }
 
   
 });
@@ -248,12 +241,11 @@ window.onload = function() {
   });
 
   masterTL
-    .add(ground(), 0)
-    .add(clouds(), 0)
-    .timeScale(0.6)
-    .progress(1)
-    .progress(0)
-    .play();
+  .add(ground(),0)
+  .add(clouds(),0)
+  .timeScale(0.7)
+  .progress(1).progress(0)
+  .play();
 };
   
 });
