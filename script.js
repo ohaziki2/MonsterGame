@@ -3,14 +3,14 @@ const monsters = [
   { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' ,reward: 0,score: 10,},
   { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' ,reward: 0,score: 6,},
   { name: 'アクアアイ', winRate: 0.5, image: '3.png' ,reward: 0,score: 5,},
-  { name: 'ピンクゴースト', winRate: 0.6, image: '4.png' ,reward: 0,score: 4,},
+  { name: 'ピンクゴースト', winRate: 0.6, image: '4.png' ,reward: 1,score: 4,},
   { name: 'イエローウィング', winRate: 0.65, image: '5.png' ,reward: 2,score: 3,},
   { name: 'パープルスペクター', winRate: 0.75, image: '6.png' ,reward: 2,score: 2,},                                                           
   { name: 'ライムハンド', winRate: 0.55, image: '7.png' ,reward: 0,score: 4,},
   { name: 'ネイビーマインド', winRate: 0.4, image: '8.png' ,reward: 0,score: 7,},
   { name: 'レッドデビル', winRate: 0.1, image: '9.png' ,reward: 0,score: 25,},
   { name: 'ブルーヘア', winRate: 0.7, image: '10.png',reward: 2,score: 4,},
-  { name: 'グレイ', winRate: 0.45, image: '11.png' ,reward: 1,score: 5,},
+  { name: 'グレイ', winRate: 0.65, image: '11.png' ,reward: 1,score: 5,},
   { name: 'コーラルシェル', winRate: 0.8, image: '12.png' ,reward: 1, score: 2,}
 ];
 const perks = [,
@@ -98,13 +98,15 @@ document.querySelectorAll('.attack-button').forEach(button => {
 
     } else {
       if (isShield) {
-        alert("シールドがあなたを守った！")
+        alert("シールドがあなたを守った！");
         isShield = false;
-      } else{
+        // この行を追加して閉じカッコを閉じる
+        showRandomMonsters();
+      } else {
         victories = 0;
         defeats++;
         resultText.textContent = '敗北...';
-        lastScore.textContent = no;
+        lastScore.textContent = nowScore;
         if (defeats >= 1) {
           invetory = []
           gameScreen.style.display = 'none';
@@ -177,22 +179,6 @@ function refleshInventory() {
 //});
 
 
-function Redirect() {
-  alert("ジャガイモのクリックありがとうございます")
-  window.location.href = "https://www.calbee.co.jp/"; 
-}
-
-
-  
-});
-function showAd(){
-  pigMeat.style.display = 'block';
-}
-
-function deleteAd(){
-  pigMeat.style.display = 'none';
-  smallButton.style.display = 'none';
-}
 document.addEventListener("DOMContentLoaded", function(event) {
 
   function ground() {
