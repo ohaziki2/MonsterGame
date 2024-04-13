@@ -1,17 +1,17 @@
 // モンスターのデータ
 const monsters = [
-  { name: 'グリーンモンスター', winRate: 0.3, image: 'image/1.png' ,reward: 0,score: 10,},
-  { name: 'オレンジスパイク', winRate: 0.4, image: 'image/2.png' ,reward: 0,score: 6,},
-  { name: 'アクアアイ', winRate: 0.5, image: 'image/.png' ,reward: 0,score: 5,},
-  { name: 'ピンクゴースト', winRate: 0.6, image: 'image/4.png' ,reward: 1,score: 4,},
-  { name: 'イエローウィング', winRate: 0.65, image: 'image/5.png' ,reward: 2,score: 3,},
-  { name: 'パープルスペクター', winRate: 0.75, image: 'image/6.png' ,reward: 2,score: 2,},                                                           
-  { name: 'ライムハンド', winRate: 0.55, image: 'image/7.png' ,reward: 0,score: 4,},
-  { name: 'ネイビーマインド', winRate: 0.4, image: 'image/8.png' ,reward: 0,score: 7,},
-  { name: 'レッドデビル', winRate: 0.1, image: 'image/9.png' ,reward: 0,score: 25,},
-  { name: 'ブルーヘア', winRate: 0.7, image: 'image/10.png',reward: 2,score: 4,},
-  { name: 'グレイ', winRate: 0.65, image: 'image/11.png' ,reward: 1,score: 5,},
-  { name: 'コーラルシェル', winRate: 0.8, image: 'image/12.png' ,reward: 1, score: 2,}
+  { name: 'グリーンモンスター', winRate: 0.3, image: 'image/green_monster.png' ,reward: 0,score: 10,},
+  { name: 'オレンジスパイク', winRate: 0.4, image: 'image/orange_spike.png' ,reward: 0,score: 6,},
+  { name: 'アクアアイ', winRate: 0.5, image: 'image/aqua_eye.png' ,reward: 0,score: 5,},
+  { name: 'ピンクゴースト', winRate: 0.6, image: 'image/pink_ghost.png' ,reward: 1,score: 4,},
+  { name: 'イエローウィング', winRate: 0.65, image: 'image/yellow_wing.png' ,reward: 2,score: 3,},
+  { name: 'パープルスペクター', winRate: 0.75, image: 'image/purple_specter.png' ,reward: 2,score: 2,},                                                           
+  { name: 'ライムハンド', winRate: 0.55, image: 'image/lime_hand.png' ,reward: 0,score: 4,},
+  { name: 'ネイビーマインド', winRate: 0.4, image: 'image/navy_mind.png' ,reward: 0,score: 7,},
+  { name: 'レッドデビル', winRate: 0.1, image: 'image/red_devil.png' ,reward: 0,score: 25,},
+  { name: 'ブルーヘア', winRate: 0.7, image: 'image/blue_hair.png',reward: 2,score: 4,},
+  { name: 'グレイ', winRate: 0.65, image: 'image/gray.png' ,reward: 1,score: 5,},
+  { name: 'コーラルシェル', winRate: 0.8, image: 'image/choral_shell.png' ,reward: 1, score: 2,}
 ];
 
 const perks = [,
