@@ -1,4 +1,5 @@
-// モンスターのデータ
+
+
 const monsters = [
   { name: 'グリーンモンスター', winRate: 0.3, image: 'image/green_monster.png' ,reward: 0,score: 10,},
   { name: 'オレンジスパイク', winRate: 0.4, image: 'image/orange_spike.png' ,reward: 0,score: 6,},
@@ -39,10 +40,15 @@ const smallButton = document.getElementById('small-Button');
 const lastScore = document.getElementById('last-score');
 
 document.getElementById('start-button').addEventListener('click', () => {
+  //let userNameInput = document.getElementById('name');
+  // let userName = userNameInput.value;
+  // console.log("ユーザーの名前:", userName);
+  
   nowScore = 0;
   myScore.textContent = "スコア:" + 0;
   startScreen.style.display = 'none';
-  gameScreen.style.display = 'block';
+  gameScreen.style.display = 'block'
+  console.log("showRandomMonsters() 関数を呼び出します");
   showRandomMonsters();
   
 });
