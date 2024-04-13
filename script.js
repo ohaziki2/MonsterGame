@@ -1,21 +1,22 @@
 // モンスターのデータ
 const monsters = [
-  { name: 'グリーンモンスター', winRate: 0.3, image: '1.png' ,reward: 0,score: 10,},
-  { name: 'オレンジスパイク', winRate: 0.4, image: '2.png' ,reward: 0,score: 6,},
-  { name: 'アクアアイ', winRate: 0.5, image: '3.png' ,reward: 0,score: 5,},
-  { name: 'ピンクゴースト', winRate: 0.6, image: '4.png' ,reward: 1,score: 4,},
-  { name: 'イエローウィング', winRate: 0.65, image: '5.png' ,reward: 2,score: 3,},
-  { name: 'パープルスペクター', winRate: 0.75, image: '6.png' ,reward: 2,score: 2,},                                                           
-  { name: 'ライムハンド', winRate: 0.55, image: '7.png' ,reward: 0,score: 4,},
-  { name: 'ネイビーマインド', winRate: 0.4, image: '8.png' ,reward: 0,score: 7,},
-  { name: 'レッドデビル', winRate: 0.1, image: '9.png' ,reward: 0,score: 25,},
-  { name: 'ブルーヘア', winRate: 0.7, image: '10.png',reward: 2,score: 4,},
-  { name: 'グレイ', winRate: 0.65, image: '11.png' ,reward: 1,score: 5,},
-  { name: 'コーラルシェル', winRate: 0.8, image: '12.png' ,reward: 1, score: 2,}
+  { name: 'グリーンモンスター', winRate: 0.3, image: 'image/1.png' ,reward: 0,score: 10,},
+  { name: 'オレンジスパイク', winRate: 0.4, image: 'image/2.png' ,reward: 0,score: 6,},
+  { name: 'アクアアイ', winRate: 0.5, image: 'image/.png' ,reward: 0,score: 5,},
+  { name: 'ピンクゴースト', winRate: 0.6, image: 'image/4.png' ,reward: 1,score: 4,},
+  { name: 'イエローウィング', winRate: 0.65, image: 'image/5.png' ,reward: 2,score: 3,},
+  { name: 'パープルスペクター', winRate: 0.75, image: 'image/6.png' ,reward: 2,score: 2,},                                                           
+  { name: 'ライムハンド', winRate: 0.55, image: 'image/7.png' ,reward: 0,score: 4,},
+  { name: 'ネイビーマインド', winRate: 0.4, image: 'image/8.png' ,reward: 0,score: 7,},
+  { name: 'レッドデビル', winRate: 0.1, image: 'image/9.png' ,reward: 0,score: 25,},
+  { name: 'ブルーヘア', winRate: 0.7, image: 'image/10.png',reward: 2,score: 4,},
+  { name: 'グレイ', winRate: 0.65, image: 'image/11.png' ,reward: 1,score: 5,},
+  { name: 'コーラルシェル', winRate: 0.8, image: 'image/12.png' ,reward: 1, score: 2,}
 ];
+
 const perks = [,
-  { name: 'シールド',image: 'shield.png'},
-  { name: 'リロール',image: 'light_amulet.png'}
+  { name: 'シールド',image: 'image/shield.png'},
+  { name: 'リロール',image: 'image/light_amulet.png'}
 ]
 //シールド 1 失敗判定無効
 //リロール 2 モンスター歳出減
@@ -156,7 +157,7 @@ function showRandomMonsters() {
     if (perks[currentMonsters[i].reward]) {
       rewardImage.src = perks[currentMonsters[i].reward].image;
     } else {
-      rewardImage.src = "transparent.png";
+      rewardImage.src = "image/transparent.png";
     }
     document.querySelectorAll('.monster-name')[i].textContent = currentMonsters[i].name;
     document.querySelectorAll('.win-rate')[i].textContent = `勝率: ${currentMonsters[i].winRate * 100}%`;
@@ -169,7 +170,7 @@ function refleshInventory() {
     if (invetory[i]) {
       invImage.src = perks[invetory[i]].image
     } else {
-      invImage.src = "transparent.png"
+      invImage.src = "image/transparent.png"
     }
     
   }
