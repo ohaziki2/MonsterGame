@@ -40,9 +40,9 @@ const smallButton = document.getElementById('small-Button');
 const lastScore = document.getElementById('last-score');
 
 document.getElementById('start-button').addEventListener('click', () => {
-  //let userNameInput = document.getElementById('name');
-  // let userName = userNameInput.value;
-  // console.log("ユーザーの名前:", userName);
+   let userNameInput = document.getElementById('name');
+   let userName = userNameInput.value;
+   console.log("ユーザーの名前:", userName);
   
   nowScore = 0;
   myScore.textContent = "スコア:" + 0;
